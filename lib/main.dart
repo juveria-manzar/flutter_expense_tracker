@@ -47,6 +47,7 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: transactions.map((transaction) {
             return Card(
                 child: Row(
@@ -64,7 +65,7 @@ class MyHomePage extends StatelessWidget {
                   ),
                   padding: EdgeInsets.all(10),
                   child: Text(
-                    transaction.amount.toString(),
+                    '\$${transaction.amount}',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 20,
